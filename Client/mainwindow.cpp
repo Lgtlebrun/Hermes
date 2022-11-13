@@ -45,7 +45,10 @@ void MainWindow::on_connectButton_clicked(){
 
 
 void MainWindow::on_sendButton_clicked(){
-
+    
+    if (!m_isConnected){
+        return;
+    }
     sendMess(message->text());
 
 
